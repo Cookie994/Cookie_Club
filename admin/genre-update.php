@@ -13,7 +13,7 @@
     }
 
     //to load a specific genre trough id, default values in the form
-    $stmt = $db->prepare("SELECT * FROM users WHERE id = ?");
+    $stmt = $db->prepare("SELECT * FROM genre WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $res = $stmt->get_result();
