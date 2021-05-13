@@ -71,7 +71,7 @@
     }
 
     //to load a specific product trough id, default values in the form
-    $stmt = $db->prepare("SELECT * FROM users WHERE id = ?");
+    $stmt = $db->prepare("SELECT * FROM products WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $res = $stmt->get_result();
